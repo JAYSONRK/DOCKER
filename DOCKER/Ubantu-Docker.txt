@@ -1,0 +1,44 @@
+UBANTU DOCKER
+
+**important ctr+c to exit
+
+1) To check ubantu version: lsb_release -a
+
+2) To update ubantu: sudo apt-get update
+
+(2A) To remove previous installation: sudo apt-get remove docker docker-engine docker.io))
+
+3) To install docker: sudo apt install docker.io
+	(for info -> docker install)
+4) To check version: docker --version
+
+(4a) Enable docker service: sudo systemctl enable docker)
+
+(4b) To check status of docker: sudo systemctl status docker)
+
+(4c) To start docker (if not started): sudo systemctl start docker)
+
+5) To check whether docker is initialized: sudo docker run hello-world
+
+6) To pull image from docker hub: sudo docker pull <image_name>:<version>
+	(To check: sudo docker images)
+
+7) To run image : sudo docker run <image_name>:<version>
+	**to run it in background (detatched):sudo docker run -d <image_name>:<version>
+	*to check application log: sudo docker logs<container id>
+
+8) To chexk the container: sudo docker ps
+
+9) To stop container: sudo docker stop <container id>
+
+10) To bind image port to localhost: sudo docker run -d(detached) -p(port binding) <localhost port>:<image port> <image name>:<version>
+
+11) To start top and restart containers
+	*To see all the container created: sudo docker ps -a 
+	*To restart container: sudo dockert start <container id>
+
+12) To rename container: sudo docker run --name <name> <image_name>:<version>
+
+13 To built image : sudo docker build -t node-app:1.0 .
+
+	

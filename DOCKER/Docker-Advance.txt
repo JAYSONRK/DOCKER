@@ -1,0 +1,44 @@
+sudo   # super user do, temporrary admin mode
+sudo su  # it will goes into root mode basically you are able to run any command in admin mode
+systemctl status docker
+systemctl stop docker
+
+systemctl start docker
+
+
+ docker pull <imagename:tag> # ex ubuntu:latest just to pull image from internet
+docker images # this commad will shows the images 
+docekr ps # this will show list of running container  
+docker run -it <imagename or id> /bin/bash # this will run image and create conatiner out of it
+docker exec -it <container ID> /bin/bash # this will execute the container and you will able to access the container enviorenment
+docker exec -u 0 -it <container ID> /bin/bash # this will execute the container in root mode
+docker rm -f <container-ID>
+docker image rm -f <image-ID>
+docekr  run -p <external port:internal port> <image name or id> # in roder to expose the container services
+
+docker build -t <dockername:tag> . # this will create and build the custom image for you
+but in "Dockerfile" file you should mention the proper script
+
+docker commit <running_container-ID-which you were working on> <new-build-image name>
+
+
+Dockerfile
+
+{
+script 
+}
+
+
+Linux path or folder traversing
+
+absolute path
+relative path
+
+
+
+
+
+
+
+
+
